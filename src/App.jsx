@@ -1,5 +1,11 @@
+import ItemListContainer from "./components/ItemListContainer";
+
 function App() {
-  return <></>;
+  return (
+    <>
+      <ItemListContainer />
+    </>
+  );
 }
 
 export default App;
