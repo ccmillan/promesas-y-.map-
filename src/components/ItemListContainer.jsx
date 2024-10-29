@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import pedirProductos from "./pedirProductos";
+import ItemList from "./ItemList";
 
 const ItemListContainer = () => {
   const [productos, setProductos] = useState([]);
@@ -23,17 +24,7 @@ const ItemListContainer = () => {
 
   return (
     <div>
-      <h1>Productos</h1>
-      {productos.length > 0 &&
-        productos.map((producto) => {
-          return (
-            <div>
-              <img src={producto.first_name} alt={producto} />
-              <h2>{producto.last_name}</h2>
-              <p>{producto.gender}</p>
-            </div>
-          );
-        })}
+      <ItemList productos={productos} />
     </div>
   );
 };
